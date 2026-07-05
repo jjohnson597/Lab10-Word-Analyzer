@@ -58,5 +58,18 @@ class WordAnalyzer:
             "2": ("Tarzan", Path("Tarzan.txt")),
             "3": ("Treasure Island", Path("treasure_island.txt")),
             "4": ("Monte Cristo", Path("monte_cristo.txt"))
-            }
+        }
         
+        while True:
+            print("\n--- Word Analyzer ---")
+            print("Please select a file to analyze:")
+            print("1. Princess Mars")
+            print("2. Tarzan")
+            print("3. Treasure Island")
+            print("4. Monte Cristo")
+            print("5. Exit")
+
+            choice = input("\nEnter your choice (1-5): ")
+
+if __name__ == "__main__":
+    main()

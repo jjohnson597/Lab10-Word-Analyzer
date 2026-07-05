@@ -49,3 +49,14 @@ class WordAnalyzer:
 
         for word in words:
             print(f"{word:<15} :: {self.__frequencies[word]}")   
+
+    def main():
+        """Display the menu and allow the user to analyze text files."""
+
+        files = {
+            "1": ("Princess Mars", Path("princess_mars.txt")),
+            "2": ("Tarzan", Path("Tarzan.txt")),
+            "3": ("Treasure Island", Path("treasure_island.txt")),
+            "4": ("Monte Cristo", Path("monte_cristo.txt"))
+            }
+        

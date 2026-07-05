@@ -50,7 +50,7 @@ class WordAnalyzer:
         for word in words:
             print(f"{word:<15} :: {self.__frequencies[word]}")   
 
-    def main():
+def main():
         """Display the menu and allow the user to analyze text files."""
 
         files = {
@@ -70,6 +70,25 @@ class WordAnalyzer:
             print("5. Exit")
 
             choice = input("\nEnter your choice (1-5): ")
+            if choice == "5":
+                print("\nGoodbye!")
+                break
+
+            elif choice in files:
+                file_name, file_path = files[choice]
+                print(f"\nProcessing '{file_path}'...")
+
+                analyzer = WordAnalyzer(file_path)
+
+                if analyzer.process_file():
+                    analyzer.print_report()
+
+                input("\nPress Enter to return to the menu...")
+
+            else:
+                print("\nInvalid choice. Please select from 1-5.")
+                input("\nPress Enter to return to the menu...")
 
 if __name__ == "__main__":
     main()
+
